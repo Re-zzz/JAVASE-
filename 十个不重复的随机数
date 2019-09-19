@@ -1,0 +1,19 @@
+import java.util.Random;
+import java.util.TreeSet;
+
+public class RandomDemo {
+    public static void main(String[] args) {
+		TreeSet<Integer> ts = new TreeSet<>();
+		Random rand = new Random();
+		int  num;
+        while(ts.size() < 10) {
+        	num = rand.nextInt(100);
+		     ts.add(num);
+        }
+        
+        for(int i : ts) {
+        	System.out.println(i);
+        }
+		
+	}
+}
