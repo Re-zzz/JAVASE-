@@ -1,0 +1,30 @@
+package MyMap;
+
+import java.util.HashMap;
+import java.util.Scanner;
+import java.util.Set;
+
+public class MyMapDemo {
+	public static void main(String[] args) {
+		Integer value = null;
+      HashMap<Character,Integer> hm = new HashMap<>();
+      System.out.println("请输入字符串");
+      Scanner s = new Scanner(System.in);
+      String ss = s.nextLine();
+      for(int i = 0 ; i < ss.length() ; i++) {
+    	  char c = ss.charAt(i);
+    	 if(hm.get(c) == null) {
+    		 hm.put(c, 1);
+    	 }
+    	 else {
+    		value = hm.get(c)+1;
+    		hm.put(c, value);    		 
+    	 }  	     	  
+      }
+      Set<Character> cKey = hm.keySet();
+      for(Character j : cKey) {
+    	  System.out.println(j+"("+hm.get(j)+")");
+      }
+	}
+	 		  	
+	}
